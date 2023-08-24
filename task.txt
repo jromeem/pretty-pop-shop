@@ -1,0 +1,9 @@
+Users should be able to:
+    - see a list of products
+    - see their shopping cart
+    - add/remove products to the shopping cart
+    - increase or decrease the quantity of the products in the cart
+    - see the total price of their cart
+    - If no product was added to the shopping cart, the page should say: “You haven’t added anything to your shopping cart yet.”
+    - If the quantity of a product is greater than 3 items, add a 10% discount for that product.
+
