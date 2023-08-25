@@ -1,4 +1,3 @@
-
 .productsContainer {
     display: flex;
     flex-direction: row;  /* This ensures the items are stacked vertically */
@@ -10,19 +9,44 @@
 .productItem {
     position: relative;
     width: calc(50% - 20px);
-    background-color: #fcf;
-    border-radius: 0px 0px 20px 20px;
+    background-color: #E00543;
+    border-radius: 20px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .productImage {
     width: 100%;
     height: 250px;
-    background-color: #ffc;
     object-fit: cover;
     border-radius: 20px;
     --mask:
-    radial-gradient(59.17px at 50% calc(100% - 81.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
-    radial-gradient(59.17px at 50% calc(100% + 51.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
-    -webkit-mask: var(--mask);
-            mask: var(--mask);
+        radial-gradient(59.17px at 50% calc(100% - 81.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(59.17px at 50% calc(100% + 51.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+                mask: var(--mask);
+    &:hover {
+        filter: blur(10px);
+        transition: filter 200ms;
+    }
+}
+
+.productTitle {
+    padding-left: 30px;
+    font-size: 25px;
+}
+
+.productPrice {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #A6CB12;
+    border-radius: 30px;
+    font-size: 20px;
+
+    width: 70px;
+    aspect-ratio: 1;
+    clip-path: polygon(95.98% 69.65%,69.74% 72.59%,63.30% 98.20%,44.64% 79.52%,20.61% 90.45%,23.58% 64.22%,0.05% 52.24%,22.41% 38.21%,17.10% 12.35%,42.02% 21.08%,58.93% 0.80%,67.63% 25.73%,94.03% 26.31%,79.97% 48.65%);
 }

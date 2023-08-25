@@ -19,7 +19,7 @@ export const ProductList = () => {
             <div>
               <img className={styles.productImage} src={`images/${product.image}`}/>
               <p>
-                {product.name} (price: ${product.price})
+                <span className={styles.productTitle}>{product.name}</span> <span className={styles.productPrice}>${product.price}</span>
               </p>
             </div>
           </div>
