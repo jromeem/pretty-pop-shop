@@ -16,7 +16,7 @@ const App = () => {
 
 
   return (<div className={styles.parentContainer}>
-    <div className={styles.titleContainer}>this is the title</div>
+    <div className={styles.titleContainer}><h1>★★★ pretty pop (p.p.) shop ★★★</h1></div>
     <div className={styles.scrollContainer}>
       <ProductList />
     </div>

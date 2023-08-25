@@ -1,4 +1,5 @@
 .productsContainer {
+    padding: 130px 0px;
     display: flex;
     flex-direction: row;  /* This ensures the items are stacked vertically */
     flex-wrap: wrap;
@@ -27,22 +28,29 @@
         -webkit-mask: var(--mask);
                 mask: var(--mask);
     &:hover {
+        image-rendering: pixelated;
         filter: blur(10px);
         transition: filter 200ms;
     }
 }
 
 .productTitle {
-    padding-left: 30px;
+    padding: 15px 30px;
+    padding-bottom: 30px;
     font-size: 25px;
 }
 
 .productPrice {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    display: flex;
+    top: 25px;
+    left: 22px;
     font-size: 20px;
     z-index: 10;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
 }
 
 .productPriceBurst {
