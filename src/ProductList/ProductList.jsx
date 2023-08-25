@@ -18,9 +18,11 @@ export const ProductList = () => {
           <div className={styles.productItem} key={product.id}>
             <div>
               <img className={styles.productImage} src={`images/${product.image}`}/>
-              <p>
-                <span className={styles.productTitle}>{product.name}</span> <span className={styles.productPrice}>${product.price}</span>
-              </p>
+              <div>
+                <div className={styles.productTitle}>{product.name}</div>
+                <div className={styles.productPriceBurst}></div>
+                <div className={styles.productPrice}>${product.price}</div>
+              </div>
             </div>
           </div>
         ))}

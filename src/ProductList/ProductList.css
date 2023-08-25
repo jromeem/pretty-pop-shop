@@ -39,6 +39,15 @@
 
 .productPrice {
     position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.productPriceBurst {
+    z-index: 1;
+    position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px;

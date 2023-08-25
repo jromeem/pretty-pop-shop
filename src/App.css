@@ -68,7 +68,6 @@ body, html {
 .fixedContainer {
     grid-area: fixed;
     overflow-y: scroll;
-    /* background: #FDF1DB; */
     padding: 20px;
 }
 
