@@ -10,6 +10,8 @@
 .productItem {
     position: relative;
     width: calc(50% - 20px);
+    background-color: #fcf;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .productImage {
@@ -18,12 +20,9 @@
     background-color: #ffc;
     object-fit: cover;
     border-radius: 20px;
-    &:hover {
-        transition: var(--mask) 200s;
-        --mask:
-            radial-gradient(25.58px at calc(100% + 4.75px) 50%,#0000 calc(99% - 12px),#000 calc(101% - 12px) 99%,#0000 101%) calc(50% - 15.5px + .5px) calc(50% - 38px)/ 31px 76px  ,
-            radial-gradient(25.58px at -4.75px 50%,#0000 calc(99% - 12px),#000 calc(101% - 12px) 99%,#0000 101%) calc(50% + 15.5px) 50%/31px 76px  ;
-        -webkit-mask: var(--mask);
-                mask: var(--mask);
-    }
+    --mask:
+    radial-gradient(59.17px at 50% calc(100% - 81.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(59.17px at 50% calc(100% + 51.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
 }
