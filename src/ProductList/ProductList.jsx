@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { fetchProducts } from "./api-mock/products-api";
+import { fetchProducts } from "../api-mock/products-api";
+import styles from "./ProductList.css";
 
 export const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -11,19 +12,18 @@ export const ProductList = () => {
     });
   }, []);
 
-  return (<div className="container">
-      <h1>Hello! Here are the available products:</h1>
-      <ul>
+  return (
+      <div className={styles.productsContainer}>
         {products.map((product) => (
-          <li key={product.id}>
+          <div className={styles.productItem} key={product.id}>
             <div>
+              <img className={styles.productImage} src={`images/${product.image}`}/>
               <p>
-                {product.name} ( price: ${product.price})
+                {product.name} (price: ${product.price})
               </p>
-              <img src={`images/${product.image}`} width="200px" />
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
-  </div>);
+      </div>
+    );
 };

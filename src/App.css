@@ -1,3 +1,48 @@
-.App {
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* This divides the container into two equal columns */
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "title title"
+        "scroll fixed";
+}
+
+.titleContainer {
+    grid-area: title;
     background-color: #fcf;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.scrollContainer {
+    grid-area: scroll;
+    overflow-y: scroll;  /* vertical scrolling */
+    overflow-x: hidden;  /* ensure no horizontal scrolling */
+    background: #ddd;
+    padding: 20px;
+}
+
+.fixedContainer {
+    grid-area: fixed;
+    overflow-y: scroll;
+    background: #ddd;
+    padding: 20px;
+}
+
+/* Optional: To hide the scrollbar but keep functionality (may not work on all browsers) */
+.scrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollContainer {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
 }

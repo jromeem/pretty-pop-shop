@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchProducts } from "./api-mock/products-api";
-import { ShoppingCart } from "./ShoppingCart";
-import { ProductList } from "./ProductList";
+import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
+import { ProductList } from "./ProductList/ProductList";
 import styles from "./App.css";
 
 const App = () => {
@@ -15,9 +15,14 @@ const App = () => {
   }, []);
 
 
-  return (<div id="wow" className={styles.App}>
-    <ProductList />
-    <ShoppingCart />
+  return (<div className={styles.parentContainer}>
+    <div className={styles.titleContainer}>this is the title</div>
+    <div className={styles.scrollContainer}>
+      <ProductList />
+    </div>
+    <div className={styles.fixedContainer}>
+      <ShoppingCart />
+    </div>
   </div>);
 };
 
