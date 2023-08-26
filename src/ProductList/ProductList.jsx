@@ -13,20 +13,12 @@ function getRandomPastelColor() {
   return `rgba(${redV},${greenV},${blueV},1)`;
 }
 
-export const ProductList = () => {
-  const [products, setProducts] = useState([]);
-  
-  useEffect(() => {
-    fetchProducts().then((products) => {
-      console.log("Fetched the products", products);
-      setProducts(products);
-    });
-  }, []);
+export const ProductList = ({products, addToBasket}) => {
 
   return (
       <div className={styles.productsContainer}>
         {products.map((product) => (
-          <div className={styles.productItem} key={product.id}>
+          <div className={styles.productItem} key={product.id} onClick={() => addToBasket(product)}>
             <div>
               <img className={styles.productImage} style={{backgroundColor: `${getRandomPastelColor()}`}} src={`images/${product.image}`}/>
               <div>

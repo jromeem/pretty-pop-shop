@@ -1,5 +1,30 @@
-.fixedContainer {
-    overflow-y: scroll;
-    background: #ddd;
-    padding: 20px;
+.basketContainer {
+    position: relative;
+    font-size: 20px;
+    line-height: 40px;
+    top: 130px;
+}
+
+.weirdMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.weirdMenu span {
+    background-color: #cfc;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.basketList {
+    background-color: #fcf;
+    font-size: 20px;
+    line-height: 50px;
+    top: 130px;
+}
+
+.totalPrice {
+    background-color: #fff;
+    font-size: 28px;
 }
