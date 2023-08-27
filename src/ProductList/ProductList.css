@@ -67,3 +67,23 @@
     aspect-ratio: 1;
     clip-path: polygon(95.98% 69.65%,69.74% 72.59%,63.30% 98.20%,44.64% 79.52%,20.61% 90.45%,23.58% 64.22%,0.05% 52.24%,22.41% 38.21%,17.10% 12.35%,42.02% 21.08%,58.93% 0.80%,67.63% 25.73%,94.03% 26.31%,79.97% 48.65%);
 }
+
+/* Mobile Styles */
+.productsContainerMobile {
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: row;  /* This ensures the items are stacked vertically */
+    flex-wrap: wrap;
+    gap: 20px; /* Optional: Adds spacing between products. */
+    position: relative;
+}
+
+.productItemMobile {
+    position: relative;
+    width: 100%;
+    background-color: #E00543;
+    border-radius: 20px;
+    &:hover {
+        cursor: pointer;
+    }
+}
